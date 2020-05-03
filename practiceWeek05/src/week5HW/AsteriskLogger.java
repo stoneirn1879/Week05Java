@@ -1,20 +1,25 @@
 package week5HW;
 
-import java.util.Date;
 
 public class AsteriskLogger implements Logger{
 
-	@Override
+	
 	public void Log(String log) {
-		Date date = new Date();
-		System.out.println(date.toString() + ": " + log);
+		System.out.println("***" + log + "***");
 			
 	}
 
-	@Override
+	
 	public void Error(String error) {
-		Date date = new Date();
-		System.out.println("Your application might be a little shaky..." + date.toString() + ": " + error);
+		System.out.println("****************\n***" + "Error: " + error + "***\n****************");
 	}
 
 }
+
+
+//5.	The error method on the AsteriskLogger should print the String it receives inside a box of asterisks, with the String
+//preceded by the word “ERROR:”. For example, if “Hello” is the argument, the following should be printed:
+
+//****************
+//***Error: Hello***
+//****************
